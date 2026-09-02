@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es-ES"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesor Jhony — Clases de Música Multiinstrumental</title>
+  <meta name="description" content="Clases de guitarra, guitarra eléctrica, teclado, batería y bajo en España. Más de 12 años de trayectoria musical y 6 años formando alumnos de todas las edades.">
+  <meta property="og:title" content="Profesor Jhony — Clases de Música Multiinstrumental">
+  <meta property="og:description" content="La música empieza donde las palabras terminan. Clases personalizadas para todas las edades.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <meta name="theme-color" content="#120D0A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+
+<!-- Custom Cursor (desktop only) -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!--
+  TODO IMPORTANTE: sustituye TODOS los enlaces "https://wa.me/34600000000"
+  por tu número real de WhatsApp (formato internacional, sin espacios ni símbolos).
+  También sustituye el email de contacto "info@profjhony.digitproduc.com".
+-->
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20las%20clases%20de%20m%C3%BAsica." class="whatsapp-float" target="_blank" rel="noopener" title="Hablar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+  </svg>
+</a>
+
+<!-- ====== NAVBAR ====== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-symbol">
+      <svg viewBox="0 0 100 100" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="42" width="16" height="40" rx="8" fill="#E8A33D"></rect>
+        <rect x="42" y="18" width="16" height="64" rx="8" fill="#E8A33D"></rect>
+        <rect x="66" y="34" width="16" height="48" rx="8" fill="#E8604C"></rect>
+      </svg>
+    </div>
+    <span class="nav-logo-text">Prof. <em>Jhony</em></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#instrumentos">Instrumentos</a></li>
+    <li><a href="#metodologia">Metodología</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#cta">Contacto</a></li>
+  </ul>
+
+  <a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20las%20clases%20de%20m%C3%BAsica." class="nav-cta" target="_blank" rel="noopener">Reservar clase</a>
+
+  <div class="nav-hamburger" id="hamburger" aria-label="Menú" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <a href="#sobre" class="mobile-link">Sobre mí</a>
+  <a href="#instrumentos" class="mobile-link">Instrumentos</a>
+  <a href="#metodologia" class="mobile-link">Metodología</a>
+  <a href="#trayectoria" class="mobile-link">Trayectoria</a>
+  <a href="#galeria" class="mobile-link">Galería</a>
+  <a href="#cta" class="mobile-link">Contacto</a>
+  <a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20las%20clases%20de%20m%C3%BAsica." class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:16px;">Hablar por WhatsApp</a>
+</div>
+
+
+<!-- ====== HERO ====== -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <canvas id="waveform"></canvas>
+    <div class="hero-watermark" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="42" width="16" height="40" rx="8" fill="#E8A33D"></rect>
+        <rect x="42" y="18" width="16" height="64" rx="8" fill="#E8A33D"></rect>
+        <rect x="66" y="34" width="16" height="48" rx="8" fill="#E8604C"></rect>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-label reveal-up">PROFESOR DE MÚSICA MULTIINSTRUMENTAL</div>
+      <h1 class="hero-headline reveal-up" style="transition-delay:.12s">
+        La música empieza<br>
+        donde las palabras<br>
+        <span class="gradient-text">terminan.</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="transition-delay:.24s">
+        Más de 12 años de trayectoria musical y 6 años enseñando guitarra, guitarra eléctrica, teclado, batería y bajo a niños, jóvenes, adultos y mayores. No existe una edad para la música — solo existen frecuencias.
+      </p>
+      <div class="hero-ctas reveal-up" style="transition-delay:.36s">
+        <a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20reservar%20una%20clase%20de%20prueba." class="btn btn-primary" target="_blank" rel="noopener">
+          Quiero mi clase de prueba
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+        </a>
+        <a href="#trayectoria" class="btn btn-ghost">Ver currículo</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-connections" id="heroConnections" viewBox="0 0 500 520" preserveAspectRatio="none"></svg>
+
+      <div class="hero-card hero-card-1" id="hc1">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"></circle><circle cx="8" cy="15" r="1.4"></circle><path d="M11.2 11.8L19 4"></path><path d="M17 3l3 1-1 3"></path></svg>
+        </div>
+        <div class="card-label">Guitarra</div>
+      </div>
+
+      <div class="hero-card hero-card-2" id="hc2">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15a4 4 0 108 0 4 4 0 00-8 0z"></path><path d="M12 12L20 4"></path><path d="M18 2l3 1-1 3"></path></svg>
+        </div>
+        <div class="card-label">Guitarra eléctrica</div>
+      </div>
+
+      <div class="hero-card hero-card-3" id="hc3">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"></rect><line x1="6.5" y1="6" x2="6.5" y2="19"></line><line x1="11" y1="6" x2="11" y2="19"></line><line x1="15.5" y1="6" x2="15.5" y2="19"></line></svg>
+        </div>
+        <div class="card-label">Teclado</div>
+      </div>
+
+      <div class="hero-card hero-card-4" id="hc4">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8604C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="8" rx="8" ry="3"></ellipse><path d="M4 8v6c0 1.7 3.6 3 8 3s8-1.3 8-3V8"></path><path d="M6 4l4 6M18 4l-4 6"></path></svg>
+        </div>
+        <div class="card-label">Batería</div>
+      </div>
+
+      <div class="hero-card hero-card-5" id="hc5">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E8604C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7" cy="16" rx="5.5" ry="4.5"></ellipse><circle cx="7" cy="16" r="1.3"></circle><path d="M10.5 12.5L21 2"></path><path d="M19 1l3 1-1 3"></path></svg>
+        </div>
+        <div class="card-label">Bajo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== METRICS BAR ====== -->
+<section id="metrics">
+  <div class="metrics-grid">
+    <div class="metric-item reveal-scale">
+      <div class="metric-number" data-target="12" data-prefix="+">+0</div>
+      <div class="metric-label">Años de trayectoria musical</div>
+    </div>
+    <div class="metric-item reveal-scale" style="transition-delay:.15s">
+      <div class="metric-number" data-target="6" data-prefix="+">+0</div>
+      <div class="metric-label">Años formando alumnos</div>
+    </div>
+    <div class="metric-item reveal-scale" style="transition-delay:.3s">
+      <div class="metric-number" data-target="5">0</div>
+      <div class="metric-label">Instrumentos enseñados</div>
+    </div>
+    <div class="metric-item reveal-scale" style="transition-delay:.45s">
+      <div class="metric-number" data-target="100" data-suffix="%">0%</div>
+      <div class="metric-label">Pasión por la música</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== SOBRE MÍ ====== -->
+<section id="sobre">
+  <div class="about-grid">
+    <div class="about-photo-frame reveal-left">
+      <!-- TODO: sustituir por <img src="assets/foto-jhony.jpg" alt="Profesor Jhony"> cuando tengas la foto -->
+      <div class="about-photo-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Foto próximamente</span>
+      </div>
+    </div>
+
+    <div class="about-text reveal-right">
+      <div class="section-tag">SOBRE MÍ</div>
+      <h2 class="section-title" style="margin-bottom:24px;">Profesor Jhony</h2>
+      <p>Me llamo Jonatas, pero puedes llamarme <strong>Profesor Jhony</strong>. Soy brasileño y un auténtico amante de la música. En más de una década tocando en carretera, en la iglesia y en bandas, recorrí el sur de Brasil llevando sentimientos y creando momentos inolvidables a miles de personas.</p>
+      <p>Desde el sonido de las cuerdas de una guitarra, el rugido de una distorsión eléctrica, hasta el golpe del bombo acompañando los latidos del corazón — la música llena, transforma, consuela y alegra nuestro ser. Porque desde los primeros tiempos, el ser humano es, en sí mismo, la música que encanta los cuatro rincones del mundo.</p>
+      <p class="about-quote">"No existe una edad para la música — solo existen frecuencias."</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== INSTRUMENTOS ====== -->
+<section id="instrumentos">
+  <div class="section-header">
+    <div class="section-tag">LO QUE ENSEÑO</div>
+    <h2 class="section-title reveal-up">Cinco instrumentos, una sola pasión</h2>
+    <p class="section-subtitle reveal-up" style="transition-delay:.1s">Clases multiinstrumentales adaptadas a tu nivel, tu edad y tu estilo musical favorito</p>
+  </div>
+
+  <div class="instruments-grid stagger">
+    <div class="instrument-card">
+      <div class="instrument-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="5"></circle><circle cx="8" cy="15" r="1.4"></circle><path d="M11.2 11.8L19 4"></path><path d="M17 3l3 1-1 3"></path></svg>
+      </div>
+      <h3 class="instrument-title">Guitarra</h3>
+    </div>
+    <div class="instrument-card">
+      <div class="instrument-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15a4 4 0 108 0 4 4 0 00-8 0z"></path><path d="M12 12L20 4"></path><path d="M18 2l3 1-1 3"></path></svg>
+      </div>
+      <h3 class="instrument-title">Guitarra eléctrica</h3>
+    </div>
+    <div class="instrument-card">
+      <div class="instrument-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"></rect><line x1="6.5" y1="6" x2="6.5" y2="19"></line><line x1="11" y1="6" x2="11" y2="19"></line><line x1="15.5" y1="6" x2="15.5" y2="19"></line></svg>
+      </div>
+      <h3 class="instrument-title">Teclado</h3>
+    </div>
+    <div class="instrument-card">
+      <div class="instrument-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8604C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="8" rx="8" ry="3"></ellipse><path d="M4 8v6c0 1.7 3.6 3 8 3s8-1.3 8-3V8"></path><path d="M6 4l4 6M18 4l-4 6"></path></svg>
+      </div>
+      <h3 class="instrument-title">Batería</h3>
+    </div>
+    <div class="instrument-card">
+      <div class="instrument-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8604C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="7" cy="16" rx="5.5" ry="4.5"></ellipse><circle cx="7" cy="16" r="1.3"></circle><path d="M10.5 12.5L21 2"></path><path d="M19 1l3 1-1 3"></path></svg>
+      </div>
+      <h3 class="instrument-title">Bajo</h3>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== METODOLOGÍA ====== -->
+<section id="metodologia">
+  <div class="section-header">
+    <div class="section-tag">METODOLOGÍA</div>
+    <h2 class="section-title reveal-up">Cómo son las clases</h2>
+    <p class="section-subtitle reveal-up" style="transition-delay:.1s">Un método pensado para que toques desde el primer día, a tu ritmo</p>
+  </div>
+
+  <div class="steps-container" id="stepsContainer">
+    <div class="steps-line" aria-hidden="true"><div class="steps-line-fill" id="stepsLineFill"></div></div>
+
+    <div class="step reveal-up"><div class="steps-dot"></div>
+      <div class="step-circle">01</div>
+      <h3 class="step-title">Primer contacto</h3>
+      <p class="step-text">Escuchamos tus objetivos, tu nivel y tus gustos musicales para diseñar el camino ideal.</p>
+    </div>
+    <div class="step reveal-up" style="transition-delay:.15s"><div class="steps-dot"></div>
+      <div class="step-circle">02</div>
+      <h3 class="step-title">Plan personalizado</h3>
+      <p class="step-text">Elegimos el instrumento, el repertorio y el ritmo de aprendizaje adecuados para ti.</p>
+    </div>
+    <div class="step reveal-up" style="transition-delay:.3s"><div class="steps-dot"></div>
+      <div class="step-circle">03</div>
+      <h3 class="step-title">Clases prácticas</h3>
+      <p class="step-text">Aprendes tocando desde el primer día, con teoría aplicada directamente a canciones reales.</p>
+    </div>
+    <div class="step reveal-up" style="transition-delay:.45s"><div class="steps-dot"></div>
+      <div class="step-circle">04</div>
+      <h3 class="step-title">Progreso y escenario</h3>
+      <p class="step-text">Acompañamos tu evolución y te preparamos para tocar en público cuando estés listo.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== TRAYECTORIA (currículo) ====== -->
+<section id="trayectoria">
+  <div class="section-header">
+    <div class="section-tag">TRAYECTORIA</div>
+    <h2 class="section-title reveal-up">Currículo</h2>
+    <p class="section-subtitle reveal-up" style="transition-delay:.1s">Más de una década dedicada a vivir y enseñar música</p>
+  </div>
+
+  <div class="resume-timeline stagger">
+    <div class="resume-item">
+      <div class="resume-dot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      </div>
+      <span class="resume-tag">Los inicios</span>
+      <h3 class="resume-title">Primeros pasos como músico autodidacta</h3>
+      <p class="resume-text">La base de una trayectoria musical que hoy suma más de 12 años, explorando la guitarra y el sonido desde muy joven.</p>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-dot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l3-16 3 16"></path><path d="M4 20h16"></path><path d="M6 20l6-13 6 13"></path></svg>
+      </div>
+      <span class="resume-tag">En la carretera</span>
+      <h3 class="resume-title">Más de 10 años tocando en bandas e iglesias</h3>
+      <p class="resume-text">Recorriendo el sur de Brasil llevando sentimientos y creando momentos inolvidables a miles de personas, en carretera, iglesias y bandas.</p>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-dot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+      </div>
+      <span class="resume-tag">La docencia</span>
+      <h3 class="resume-title">6 años enseñando música multiinstrumental</h3>
+      <p class="resume-text">Guitarra, guitarra eléctrica, teclado, batería y bajo — a niños, jóvenes, adultos y mayores. Porque no existe una edad para la música.</p>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-dot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#E8604C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+      </div>
+      <span class="resume-tag">Ahora, en España</span>
+      <h3 class="resume-title">Nueva etapa profesional</h3>
+      <p class="resume-text">Llevando la misma pasión y metodología a nuevos alumnos y escuelas de música en España.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== GÉNEROS ====== -->
+<section id="generos">
+  <div class="section-header" style="margin-bottom:48px">
+    <div class="section-tag">REPERTORIO</div>
+    <h2 class="section-title reveal-up">Frecuencias para todos los gustos</h2>
+  </div>
+
+  <div class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="tool-item"><div class="tool-dot"></div><span>Rock</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Pop</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Gospel</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>MPB</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Sertanejo</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Blues</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Bossa Nova</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Jazz</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Balada</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Flamenco</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Clásica</span></div>
+      <!-- clone for infinite loop -->
+      <div class="tool-item"><div class="tool-dot"></div><span>Rock</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Pop</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Gospel</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>MPB</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Sertanejo</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Blues</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Bossa Nova</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Jazz</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Balada</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Flamenco</span></div>
+      <div class="tool-item"><div class="tool-dot"></div><span>Clásica</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== GALERÍA ====== -->
+<section id="galeria">
+  <div class="section-header">
+    <div class="section-tag">GALERÍA</div>
+    <h2 class="section-title reveal-up">Momentos sobre el escenario</h2>
+    <p class="section-subtitle reveal-up" style="transition-delay:.1s">Fotos y vídeos tocando en directo, en clase y en estudio</p>
+  </div>
+
+  <!--
+    TODO: sustituir cada .gallery-placeholder por una imagen real:
+    <div class="gallery-item"><img src="assets/galeria/foto-1.jpg" alt="..."></div>
+    o por un vídeo de YouTube incrustado:
+    <div class="gallery-item video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." allowfullscreen></iframe></div>
+  -->
+  <div class="gallery-grid stagger">
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+        <span>Foto próximamente</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+        <span>Foto próximamente</span>
+      </div>
+    </div>
+    <div class="gallery-item video">
+      <div class="gallery-placeholder">
+        <span>Vídeo próximamente</span>
+      </div>
+    </div>
+    <div class="gallery-item video">
+      <div class="gallery-placeholder">
+        <span>Vídeo próximamente</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+        <span>Foto próximamente</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+        <span>Foto próximamente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== TESTIMONIOS ====== -->
+<section id="testimonios">
+  <div class="section-header">
+    <div class="section-tag">TESTIMONIOS</div>
+    <h2 class="section-title reveal-up">Lo que dicen mis alumnos</h2>
+    <p class="section-subtitle reveal-up" style="transition-delay:.1s">Espacio reservado — pronto compartiremos aquí las experiencias reales de mis alumnos</p>
+  </div>
+
+  <!-- TODO: sustituir estas 3 tarjetas por testimonios reales cuando los tengas -->
+  <div class="testimonials-grid stagger">
+    <div class="testimonial-card placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
+      <span>Testimonio próximamente</span>
+    </div>
+    <div class="testimonial-card placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
+      <span>Testimonio próximamente</span>
+    </div>
+    <div class="testimonial-card placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path></svg>
+      <span>Testimonio próximamente</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== CTA FINAL ====== -->
+<section id="cta">
+  <div class="cta-bg" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <div class="cta-symbol" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="42" width="16" height="40" rx="8" fill="#E8A33D"></rect>
+        <rect x="42" y="18" width="16" height="64" rx="8" fill="#E8A33D"></rect>
+        <rect x="66" y="34" width="16" height="48" rx="8" fill="#E8604C"></rect>
+      </svg>
+    </div>
+    <h2 class="cta-title reveal-up">
+      ¿Listo para tocar<br>tu próxima canción?
+    </h2>
+    <p class="cta-sub reveal-up" style="transition-delay:.1s">
+      Clases personalizadas para todas las edades y niveles.<br>
+      Guitarra, guitarra eléctrica, teclado, batería y bajo — a tu ritmo.
+    </p>
+    <div class="cta-buttons reveal-up" style="transition-delay:.2s">
+      <a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20reservar%20una%20clase%20de%20prueba." class="btn btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+        Hablar por WhatsApp
+      </a>
+      <a href="mailto:info@profjhony.digitproduc.com?subject=Contacto%20v%C3%ADa%20web" class="btn btn-ghost">Enviar correo</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== FOOTER ====== -->
+<footer id="contato">
+  <div class="footer-top-line" aria-hidden="true"></div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-symbol">
+          <svg viewBox="0 0 100 100" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="42" width="16" height="40" rx="8" fill="#E8A33D"></rect>
+            <rect x="42" y="18" width="16" height="64" rx="8" fill="#E8A33D"></rect>
+            <rect x="66" y="34" width="16" height="48" rx="8" fill="#E8604C"></rect>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Prof. <em>Jhony</em></span>
+      </a>
+      <p class="footer-tagline">Educación musical multiinstrumental, en cualquier edad, en cualquier frecuencia.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4 class="footer-heading">Navegación</h4>
+      <ul>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#instrumentos">Instrumentos</a></li>
+        <li><a href="#trayectoria">Trayectoria</a></li>
+        <li><a href="#cta">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social-col">
+      <h4 class="footer-heading">Redes Sociales</h4>
+      <div class="social-icons">
+        <a href="#" class="social-icon" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"></circle></svg>
+        </a>
+        <a href="#" class="social-icon" title="YouTube" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.5 6.2a2.8 2.8 0 00-2-2C18.9 3.7 12 3.7 12 3.7s-6.9 0-8.5.5a2.8 2.8 0 00-2 2A29 29 0 001 12a29 29 0 00.5 5.8 2.8 2.8 0 002 2c1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5a2.8 2.8 0 002-2A29 29 0 0023 12a29 29 0 00-.5-5.8z"></path><polygon points="9.8 15.5 15.8 12 9.8 8.5 9.8 15.5" fill="currentColor" stroke="none"></polygon></svg>
+        </a>
+        <a href="https://wa.me/34600000000?text=Hola%2C%20he%20entrado%20a%20trav%C3%A9s%20de%20tu%20web%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20las%20clases%20de%20m%C3%BAsica." class="social-icon" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Profesor Jhony. Todos los derechos reservados.</p>
+    <p class="footer-copy">info@profjhony.digitproduc.com</p>
+  </div>
+</footer>
+
+<script src="scripts/waveform.js" defer></script>
+<script src="scripts/animations.js" defer></script>
+<script src="scripts/main.js" defer></script>
+
+<button class="scroll-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+</body></html>
