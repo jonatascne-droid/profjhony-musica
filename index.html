@@ -16,16 +16,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css?v=5">
-  <link rel="stylesheet" href="styles/animations.css?v=5">
-  <link rel="stylesheet" href="styles/components.css?v=5">
+  <link rel="stylesheet" href="styles/main.css?v=6">
+  <link rel="stylesheet" href="styles/animations.css?v=6">
+  <link rel="stylesheet" href="styles/components.css?v=6">
 </head>
 <body>
 
 <!-- Custom Cursor (desktop only) -->
 <div class="cursor-spotlight" id="cursorSpotlight"></div>
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!--
   TODO IMPORTANTE: sustituye TODOS los enlaces "https://wa.me/34600000000"
@@ -185,11 +183,7 @@
 <section id="sobre">
   <div class="about-grid">
     <div class="about-photo-frame reveal-left">
-      <!-- TODO: sustituir por <img src="assets/foto-jhony.jpg" alt="Profesor Jhony"> cuando tengas la foto -->
-      <div class="about-photo-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        <span>Foto próximamente</span>
-      </div>
+      <img src="assets/foto-jhony-sobre.jpg" alt="Profesor Jhony con su guitarra">
     </div>
 
     <div class="about-text reveal-right">
@@ -476,6 +470,8 @@
 
 <!-- ====== CTA FINAL ====== -->
 <section id="cta">
+  <img class="cta-photo" src="assets/foto-jhony-cta.jpg" alt="" aria-hidden="true">
+  <div class="cta-scrim" aria-hidden="true"></div>
   <div class="cta-bg" aria-hidden="true"></div>
   <div class="cta-inner">
     <div class="cta-symbol" aria-hidden="true">
@@ -553,9 +549,9 @@
   </div>
 </footer>
 
-<script src="scripts/waveform.js?v=5" defer></script>
-<script src="scripts/animations.js?v=5" defer></script>
-<script src="scripts/main.js?v=5" defer></script>
+<script src="scripts/waveform.js?v=6" defer></script>
+<script src="scripts/animations.js?v=6" defer></script>
+<script src="scripts/main.js?v=6" defer></script>
 
 <button class="scroll-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
 </body></html>

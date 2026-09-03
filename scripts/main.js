@@ -5,54 +5,34 @@
 (function () {
 
   /* =====================
-     1. CUSTOM CURSOR
+     1. CURSOR GLOW (native pointer + a subtle trailing light)
   ===================== */
-  const cursor     = document.getElementById('cursor');
-  const cursorRing = document.getElementById('cursorRing');
-  const spotlight  = document.getElementById('cursorSpotlight');
+  const spotlight = document.getElementById('cursorSpotlight');
 
-  if (cursor && cursorRing && window.matchMedia('(pointer: fine)').matches) {
-    let mx = 0, my = 0, rx = 0, ry = 0, sx = 0, sy = 0;
+  if (spotlight && window.matchMedia('(pointer: fine)').matches) {
+    let mx = 0, my = 0, sx = 0, sy = 0;
 
     document.addEventListener('mousemove', e => {
       mx = e.clientX;
       my = e.clientY;
-      cursor.style.left = mx + 'px';
-      cursor.style.top  = my + 'px';
-      if (spotlight && !spotlight.classList.contains('active')) {
+      if (!spotlight.classList.contains('active')) {
         sx = mx; sy = my;
         spotlight.classList.add('active');
       }
     });
 
-    (function ringLoop() {
-      rx += (mx - rx) * 0.11;
-      ry += (my - ry) * 0.11;
-      cursorRing.style.left = rx + 'px';
-      cursorRing.style.top  = ry + 'px';
-      requestAnimationFrame(ringLoop);
+    (function spotlightLoop() {
+      sx += (mx - sx) * 0.08;
+      sy += (my - sy) * 0.08;
+      spotlight.style.left = sx + 'px';
+      spotlight.style.top  = sy + 'px';
+      requestAnimationFrame(spotlightLoop);
     })();
-
-    if (spotlight) {
-      (function spotlightLoop() {
-        sx += (mx - sx) * 0.06;
-        sy += (my - sy) * 0.06;
-        spotlight.style.left = sx + 'px';
-        spotlight.style.top  = sy + 'px';
-        requestAnimationFrame(spotlightLoop);
-      })();
-    }
 
     const hoverSels = 'a, button, .btn, .hero-card, .instrument-card, .resume-item, .testimonial-card, .video-thumb, .nav-hamburger, .social-icon, .tool-item';
     document.querySelectorAll(hoverSels).forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
-        cursorRing.classList.add('hover');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-        cursorRing.classList.remove('hover');
-      });
+      el.addEventListener('mouseenter', () => spotlight.classList.add('hover'));
+      el.addEventListener('mouseleave', () => spotlight.classList.remove('hover'));
     });
 
     /* ---- Magnetic buttons ---- */
