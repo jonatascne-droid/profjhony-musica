@@ -71,6 +71,22 @@ a  { color: inherit; }
 .cursor.hover { transform: translate(-50%, -50%) scale(2.2); background: rgba(232,163,61,0.6); }
 .cursor-ring.hover { border-color: rgba(232,163,61,0.6); transform: translate(-50%, -50%) scale(1.4); }
 
+/* ---- Cursor Spotlight (stage-light glow that follows the pointer) ---- */
+.cursor-spotlight {
+  position: fixed; top: 0; left: 0;
+  width: 620px; height: 620px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,163,61,0.18) 0%, rgba(232,96,76,0.09) 38%, transparent 70%);
+  pointer-events: none;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  will-change: left, top;
+}
+.cursor-spotlight.active { opacity: 1; }
+
 /* ---- WhatsApp float ---- */
 .whatsapp-float {
   position: fixed;
@@ -141,7 +157,7 @@ nav.scrolled {
   color: var(--accent);
   text-decoration: none;
   font-size: 0.85rem; font-weight: 600;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), transform 0.15s ease;
   white-space: nowrap;
 }
 .nav-cta:hover { background: var(--accent); color: var(--bg-primary); }
@@ -650,7 +666,7 @@ footer { background: var(--bg-primary); padding: 52px 6% 28px; position: relativ
 }
 @media (max-width: 768px) {
   body { cursor: auto; }
-  .cursor, .cursor-ring { display: none; }
+  .cursor, .cursor-ring, .cursor-spotlight { display: none; }
   section { padding: 68px 5%; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }

@@ -7,17 +7,22 @@
   /* =====================
      1. CUSTOM CURSOR
   ===================== */
-  const cursor    = document.getElementById('cursor');
+  const cursor     = document.getElementById('cursor');
   const cursorRing = document.getElementById('cursorRing');
+  const spotlight  = document.getElementById('cursorSpotlight');
 
   if (cursor && cursorRing && window.matchMedia('(pointer: fine)').matches) {
-    let mx = 0, my = 0, rx = 0, ry = 0;
+    let mx = 0, my = 0, rx = 0, ry = 0, sx = 0, sy = 0;
 
     document.addEventListener('mousemove', e => {
       mx = e.clientX;
       my = e.clientY;
       cursor.style.left = mx + 'px';
       cursor.style.top  = my + 'px';
+      if (spotlight && !spotlight.classList.contains('active')) {
+        sx = mx; sy = my;
+        spotlight.classList.add('active');
+      }
     });
 
     (function ringLoop() {
@@ -28,7 +33,17 @@
       requestAnimationFrame(ringLoop);
     })();
 
-    const hoverSels = 'a, button, .btn, .hero-card, .instrument-card, .resume-item, .testimonial-card, .gallery-item, .nav-hamburger, .social-icon, .tool-item';
+    if (spotlight) {
+      (function spotlightLoop() {
+        sx += (mx - sx) * 0.06;
+        sy += (my - sy) * 0.06;
+        spotlight.style.left = sx + 'px';
+        spotlight.style.top  = sy + 'px';
+        requestAnimationFrame(spotlightLoop);
+      })();
+    }
+
+    const hoverSels = 'a, button, .btn, .hero-card, .instrument-card, .resume-item, .testimonial-card, .video-thumb, .nav-hamburger, .social-icon, .tool-item';
     document.querySelectorAll(hoverSels).forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.classList.add('hover');
@@ -37,6 +52,19 @@
       el.addEventListener('mouseleave', () => {
         cursor.classList.remove('hover');
         cursorRing.classList.remove('hover');
+      });
+    });
+
+    /* ---- Magnetic buttons ---- */
+    document.querySelectorAll('.btn, .nav-cta').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const relX = e.clientX - rect.left - rect.width / 2;
+        const relY = e.clientY - rect.top - rect.height / 2;
+        el.style.transform = `translate(${relX * 0.25}px, ${relY * 0.35}px)`;
+      });
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
       });
     });
   }
