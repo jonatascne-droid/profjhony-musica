@@ -227,4 +227,21 @@
     resizeTimer = setTimeout(initProcessTimeline, 200);
   });
 
+
+  /* =====================
+     9. VIDEO THUMBNAILS — load the real YouTube player only on click
+  ===================== */
+  document.querySelectorAll('.video-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const id = thumb.dataset.videoId;
+      if (!id) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+      iframe.title = thumb.getAttribute('aria-label') || 'Vídeo';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      thumb.replaceChildren(iframe);
+    });
+  });
+
 })();
